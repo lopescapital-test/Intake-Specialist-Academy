@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeuroHome — Clinical & Enrollment Foundations Course</title>
+<meta name="description" content="Clinical and enrollment training for the NeuroHome program: autism neuroscience, therapy modalities, family experience, and consultative enrollment.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 52'%3E%3Crect x='8' y='22' width='36' height='27' rx='3' stroke='%231D2939' stroke-width='2.2' fill='white'/%3E%3Cpath d='M 4 24 L 26 5 L 48 24' stroke='%231D2939' stroke-width='2.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='20' y='34' width='12' height='15' rx='1.5' stroke='%231D2939' stroke-width='1.5' fill='rgba(0,206,253,0.06)'/%3E%3Ccircle cx='8' cy='22' r='3' fill='%2300CEFD'/%3E%3Ccircle cx='44' cy='22' r='3' fill='%2300CEFD'/%3E%3Ccircle cx='8' cy='49' r='3' fill='%2300CEFD'/%3E%3Ccircle cx='44' cy='49' r='3' fill='%2300CEFD'/%3E%3Ccircle cx='26' cy='5' r='3' fill='%2300CEFD'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Sidebar / learning pathway -->
+<aside class="rail" id="rail" aria-label="Course modules">
+  <div class="rail-head">
+    <div class="brand brand-logo-card" aria-label="NeuroHome by NeuroSage Centers">
+      <span class="neurohome-lockup" aria-hidden="true">
+        <svg class="neurohome-lockup-icon" width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="22" width="36" height="27" rx="3" stroke="#1D2939" stroke-width="2.2" fill="none"/>
+          <path d="M 4 24 L 26 5 L 48 24" stroke="#1D2939" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="20" y="34" width="12" height="15" rx="1.5" stroke="#1D2939" stroke-width="1.5" fill="rgba(0,206,253,0.06)"/>
+          <circle cx="8" cy="22" r="3" fill="#00CEFD"/>
+          <circle cx="44" cy="22" r="3" fill="#00CEFD"/>
+          <circle cx="8" cy="49" r="3" fill="#00CEFD"/>
+          <circle cx="44" cy="49" r="3" fill="#00CEFD"/>
+          <circle cx="26" cy="5" r="3" fill="#00CEFD"/>
+        </svg>
+        <span class="neurohome-lockup-text">
+          <span class="neurohome-lockup-name">Neuro<span>Home</span></span>
+          <span class="neurohome-lockup-sub">BY NEUROSAGE CENTERS</span>
+        </span>
+      </span>
+    </div>
+  </div>
+
+  <nav class="pathway" id="pathway" aria-label="Modules">
+    <!-- waveform spine + module links injected here -->
+  </nav>
+
+  <div class="rail-foot">
+    <div class="progress-readout">
+      <span class="progress-num" id="progressNum">0</span>
+      <span class="progress-den">/ 13 modules complete</span>
+    </div>
+    <button class="reset-btn" id="resetBtn" type="button">Reset progress</button>
+  </div>
+</aside>
+
+<button class="rail-toggle" id="railToggle" aria-label="Toggle module menu" aria-expanded="false">
+  <span></span><span></span><span></span>
+</button>
+
+<!-- Main reading area -->
+<main class="main" id="main" tabindex="-1">
+  <!-- HOME / overview -->
+  <section class="view view-home" id="view-home">
+    <div class="home-hero">
+      <p class="eyebrow">Intake specialist training · Full course</p>
+      <h1 class="home-title">The science and<br>the conversation.</h1>
+      <p class="home-lede">
+        Before you can help a family, you have to understand what they are living through,
+        the biology underneath it, and the enrollment conversation that moves the right families
+        from confusion to clarity. These modules cover both the clinical foundations and the
+        consultative enrollment system.
+      </p>
+      <div class="home-cta-row">
+        <button class="btn-primary" id="startBtn" type="button">Start Module 1</button>
+        <span class="home-meta"><span id="homeCount">13</span> modules · <span id="homeQCount">60</span> knowledge checks</span>
+      </div>
+    </div>
+
+    <div class="module-grid" id="moduleGrid" aria-label="All modules"></div>
+
+    <p class="home-note">
+      This course covers clinical foundations, family-experience context, consultative enrollment, objection handling, urgency, commitment, and referral generation. It is internal training, not medical advice, and does not itself make treatment claims to families.
+    </p>
+  </section>
+
+  <!-- MODULE reading view -->
+  <section class="view view-module" id="view-module" hidden>
+    <article class="reader" id="reader" aria-live="polite"></article>
+
+    <!-- Knowledge check -->
+    <section class="quiz" id="quiz" aria-label="Knowledge check"></section>
+
+    <nav class="module-nav" id="moduleNav" aria-label="Module navigation"></nav>
+  </section>
+</main>
+
+<script src="course-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
